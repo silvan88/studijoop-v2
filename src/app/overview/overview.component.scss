@@ -1,0 +1,66 @@
+@import "../../../node_modules/bootstrap/scss/mixins/gradients";
+
+@mixin make-aspect-ratio($ratio, $percentage) {
+
+  .aspect-ratio-#{$ratio} {
+    padding-bottom: $percentage;
+  }
+}
+
+// Set the base of the aspect ratio classes to make sure the image is cropped correctly
+[class*='aspect-ratio'] {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 0%;
+
+    // Polyfill for object-fit to support IE
+    font-family: 'object-fit: cover;'
+  }
+}
+
+// Now assign all the aspect ratios to the correct classes
+@include make-aspect-ratio('3-1', 33.33%);
+@include make-aspect-ratio('3-2', 66.66%);
+@include make-aspect-ratio('4-3', 75%);
+@include make-aspect-ratio('1-1', 100%);
+@include make-aspect-ratio('8-5', 62.5%);
+@include make-aspect-ratio('13-6', 46.15%);
+@include make-aspect-ratio('16-9', 56.25%);
+
+.card {
+  margin-top: 30px;
+}
+
+.max-width {
+  width: 100%;
+
+  .slider-block {
+    display: block;
+    width: 100%;
+    height: 500px;
+    transition: all .25s ease-in-out;
+
+    &.blue {
+      @include gradient-directional(#0fb8ad, #2cb5e8);
+    }
+
+    &.green {
+      @include gradient-directional(#a6b829, #bce8a3);
+    }
+
+    &.red {
+      @include gradient-directional(#b82376, #e88c65);
+    }
+  }
+}

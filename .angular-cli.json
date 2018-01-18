@@ -17,9 +17,10 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "studijoop",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "../node_modules/open-iconic/font/css/open-iconic.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

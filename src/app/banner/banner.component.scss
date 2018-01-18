@@ -1,0 +1,26 @@
+@import "../../../node_modules/bootstrap/scss/mixins/gradients";
+
+:host {
+  &.blue {
+    .sj-banner {
+      @include gradient-directional(#0fb8ad, #2cb5e8);
+    }
+  }
+
+  &.green {
+    .sj-banner {
+      @include gradient-directional(#a6b829, #bce8a3);
+    }
+  }
+
+  &.red {
+    .sj-banner {
+      @include gradient-directional(#b82376, #e88c65);
+    }
+  }
+
+  .content {
+    padding: 64px 15px;
+    color: white;
+  }
+}
