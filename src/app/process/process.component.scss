@@ -1,0 +1,14 @@
+@import "../../../node_modules/bootstrap/scss/mixins/gradients";
+
+:host {
+  h2 {
+  margin-bottom: 0;
+  }
+
+  hr {
+    @include gradient-directional(#b82376, #e88c65);
+    border: none;
+    margin-top: 5px;
+    height: 2px;
+  }
+}

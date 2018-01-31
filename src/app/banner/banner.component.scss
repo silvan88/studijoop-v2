@@ -1,6 +1,10 @@
 @import "../../../node_modules/bootstrap/scss/mixins/gradients";
 
 :host {
+  .sj-banner {
+    margin-bottom: 1rem;
+  }
+
   &.blue {
     .sj-banner {
       @include gradient-directional(#0fb8ad, #2cb5e8);
